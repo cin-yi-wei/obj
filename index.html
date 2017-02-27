@@ -472,7 +472,7 @@ THREE.OBJLoader.prototype = {
     };
 
     var imgLoader = new THREE.ImageLoader(manager);
-    imgLoader.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/brick_bump_small.jpg', function(image){
+    imgLoader.load('/jpg/b.jpg', function(image){
       texture.image = image;
       texture.needsUpdate = true;
     });
@@ -481,7 +481,7 @@ THREE.OBJLoader.prototype = {
     var loader = new THREE.OBJLoader(manager);
     // custom method to load and add model to the scene
     function loadModelAndAddItToScene(loader, yPos) {
-      loader.load('obj/a.obj', function(object) {
+      loader.load('/obj/a.obj', function(object) {
       //loader.load('/assets/dandelion_stem.obj', function(object) {
         object.traverse(function(child){
           if (child instanceof THREE.Mesh) {
